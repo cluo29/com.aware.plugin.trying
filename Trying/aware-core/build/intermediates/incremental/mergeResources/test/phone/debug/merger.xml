@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="E:\WWWWWWWWW\Trying\aware-core\src\androidTest\res"/><source path="E:\WWWWWWWWW\Trying\aware-core\build\generated\res\rs\test\phone\debug"/><source path="E:\WWWWWWWWW\Trying\aware-core\build\generated\res\generated\test\phone\debug"/></dataSet><dataSet config="androidTestPhone"><source path="E:\WWWWWWWWW\Trying\aware-core\src\androidTestPhone\res"/></dataSet><mergedItems/></merger>

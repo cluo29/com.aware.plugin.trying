@@ -37,12 +37,12 @@ public class ContextCard implements IContextCard {
 
         Cursor latest = context.getContentResolver().query(AmbientNoise_Data.CONTENT_URI, null, null, null, AmbientNoise_Data.TIMESTAMP + " DESC LIMIT 1");
         if( latest != null && latest.moveToFirst() ) {
-            frequency.setText("COMET is super clever");
+            frequency.setText("There was data");
             //frequency.setText(String.format("%.1f", latest.getDouble(latest.getColumnIndex(AmbientNoise_Data.FREQUENCY))) + " Hz");
         }
         else
         {
-            frequency.setText("COMET is super cleverrrrrr");
+            //frequency.setText("COMET is super cleverrrrrr");
             //always in this branch==
         }
         if( latest != null && ! latest.isClosed() ) latest.close();

@@ -9,6 +9,7 @@
         android:label="@string/app_name">
 
         <service android:name=".Plugin" android:exported="true" />
+        <provider android:name="com.aware.plugin.trying.Provider" android:authorities="${applicationId}.provider.trying" android:exported="true" android:readPermission="com.aware.READ_CONTEXT_DATA" android:writePermission="com.aware.WRITE_CONTEXT_DATA"/>
         <activity
             android:name=".Settings"
             android:label="@string/app_name"
