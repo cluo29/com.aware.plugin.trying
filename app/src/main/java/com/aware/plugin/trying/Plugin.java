@@ -3,7 +3,6 @@ package com.aware.plugin.trying;
 /**
  * Created by CLUO29 on 2/27/2015.
  */
-
 import android.content.ContentValues;
 import android.content.Intent;
 import android.media.AudioFormat;
@@ -85,7 +84,7 @@ public class Plugin extends Aware_Plugin {
                     data.put(AmbientNoise_Data.TIMESTAMP, System.currentTimeMillis());
                     data.put(AmbientNoise_Data.DEVICE_ID, Aware.getSetting(getApplicationContext(), Aware_Preferences.DEVICE_ID));
                     data.put(AmbientNoise_Data.FREQUENCY, sound_frequency);
-
+                    //System.out.println("sound_frequency   "+sound_frequency);
                     getContentResolver().insert(AmbientNoise_Data.CONTENT_URI, data);
 
                     //Share context

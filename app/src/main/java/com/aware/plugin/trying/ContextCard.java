@@ -29,7 +29,7 @@ import com.aware.utils.IContextCard;
 public class ContextCard implements IContextCard {
     private static TextView frequency;
     private static LinearLayout ambient_plot;
-    public ContextCard(){}
+    public ContextCard(){};
     public View getContextCard(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View card = inflater.inflate(R.layout.activity_settings, null);
@@ -37,8 +37,8 @@ public class ContextCard implements IContextCard {
 
         Cursor latest = context.getContentResolver().query(AmbientNoise_Data.CONTENT_URI, null, null, null, AmbientNoise_Data.TIMESTAMP + " DESC LIMIT 1");
         if( latest != null && latest.moveToFirst() ) {
-            frequency.setText("There was data");
-            //frequency.setText(String.format("%.1f", latest.getDouble(latest.getColumnIndex(AmbientNoise_Data.FREQUENCY))) + " Hz");
+            //frequency.setText("There was data");
+            frequency.setText(String.format("%.1f", latest.getDouble(latest.getColumnIndex(AmbientNoise_Data.FREQUENCY))) + " Hz");
         }
         else
         {

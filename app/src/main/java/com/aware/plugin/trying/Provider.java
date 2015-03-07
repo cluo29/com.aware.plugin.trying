@@ -4,7 +4,6 @@ package com.aware.plugin.trying;
  * Created by CLUO29 on 2/27/2015.
  */
 import java.util.HashMap;
-
 import android.content.ContentProvider;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -65,6 +64,7 @@ public class Provider extends ContentProvider {
     public boolean onCreate() {
         AUTHORITY = getContext().getPackageName() + ".provider.trying";
 
+
         URIMatcher = new UriMatcher(UriMatcher.NO_MATCH);
         URIMatcher.addURI(AUTHORITY, DATABASE_TABLES[0], AMBIENT_NOISE);
         URIMatcher.addURI(AUTHORITY, DATABASE_TABLES[0]+"/#", AMBIENT_NOISE_ID);
@@ -79,11 +79,15 @@ public class Provider extends ContentProvider {
     }
 
     private boolean initializeDB() {
+
         if (databaseHelper == null) {
+
             databaseHelper = new DatabaseHelper( getContext(), DATABASE_NAME, null, DATABASE_VERSION, DATABASE_TABLES, TABLES_FIELDS );
+
         }
         if( databaseHelper != null && ( database == null || ! database.isOpen() )) {
             database = databaseHelper.getWritableDatabase();
+
         }
         return( database != null && databaseHelper != null);
     }
