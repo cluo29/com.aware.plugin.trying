@@ -78,7 +78,7 @@ public class Plugin extends Aware_Plugin {
                             max_index = i;
                         }
                     }
-                    sound_frequency = max_index * 8000 / buffer_size; //Hz here!
+                    sound_frequency = 2*max_index * 8000 / buffer_size; //Hz here!
                     ContentValues data = new ContentValues();
                     //require Provider.java here
                     data.put(AmbientNoise_Data.TIMESTAMP, System.currentTimeMillis());
