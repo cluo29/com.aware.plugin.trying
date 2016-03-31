@@ -70,7 +70,8 @@ public class ESM_Queue extends FragmentActivity {
         
         if( getQueueSize(getApplicationContext()) > 0 ) {
             DialogFragment esm = new ESM_UI();
-            esm.show(fragmentManager, TAG);
+            if (!isFinishing())
+            	esm.show(fragmentManager, TAG);
             if( ! powerManager.isScreenOn() ) {
                 vibrator.vibrate(777);
             }
